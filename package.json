@@ -2,7 +2,7 @@
   "name": "mysite",
   "version": "0.1.0",
   "private": true,
-  "homepage":"https://samsha1.github.io/",
+  "homepage":"https://samsha1.github.io/portfolio/",
   "dependencies": {
     "@material-ui/core": "^3.0.2",
     "babel-plugin-transform-class-properties": "^6.24.1",
