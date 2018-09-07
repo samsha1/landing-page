@@ -1,0 +1,25 @@
+.intro-wrapper {
+  text-align: center;
+  color: #fff;
+  position: relative;
+  top: 100px;
+  z-index: 1000; }
+
+.intro-name {
+  font-family: Reem Kufi,sans-serif;
+  font-size: 4rem;
+  font-weight: 700;
+  line-height: 4rem;
+  padding-bottom: 1rem; }
+
+.intro-wrapper > .tagline {
+  font-size: 1.375rem;
+  margin: 1.5rem 0;
+  font-weight: 300; }
+
+.App-logo {
+  color: white; }
+
+.social-icons {
+  padding: 0.25rem 0;
+  font-size: 3rem; }
