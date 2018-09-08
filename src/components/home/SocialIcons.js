@@ -1,7 +1,6 @@
 import React from 'react';
 import { IconContext } from "react-icons";
 import { FaStackOverflow,FaLinkedin,FaGithub,FaTwitter } from 'react-icons/fa';
-import './styles.css';
 
 const SocialIcons = () =>{
 	return(

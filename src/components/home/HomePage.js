@@ -1,5 +1,5 @@
 import React from 'react';
-import './homePage.css';
+import './styles.scss';
 import SocialIcons from './SocialIcons';
 
 class HomePage extends React.Component{
