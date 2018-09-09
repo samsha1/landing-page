@@ -1,11 +1,11 @@
 import React from 'react';
 import Particles from 'react-particles-js';
-import './styles.css';
+import './styles.scss';
 
 const particleOpt = {
 	"particles": {
 	        "number": {
-	            "value": 300,
+	            "value": 200,
 	            "density": {
 	                "enable": false
 	            }
@@ -23,7 +23,7 @@ const particleOpt = {
 	        },
 	        "move": {
 	            "random": true,
-	            "speed": 1,
+	            "speed": 2,
 	            "direction": "bottom",
 	            "out_mode": "out"
 	        }
@@ -56,8 +56,8 @@ const particleOpt = {
 
 const ParticlesJS = () => {
 	return(
-			<div className="particle-js">
-				<Particles params={particleOpt}/>
+			<div>
+				<Particles params={particleOpt} canvasClassName="particle-js-el"/>
 			</div>
 
 		);
