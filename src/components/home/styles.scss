@@ -1,5 +1,5 @@
 @import '../../styles/breakpoints';
-
+$break-small: 575px;
 
 .intro-wrapper {
   text-align: center;
@@ -96,17 +96,57 @@
   font-size: 36px;
 }
 
-.playSpan{
-  span {
-    display: inline-block;
-    margin: 0.5em;
-    text-align: center;
-    background-color: #ccc;
-    width: 24px;
-    border-radius: 50%;
-    cursor: pointer;
+
+  .playSpan {
+    span{
+      display: inline-block;
+       margin: 0.5em;
+       text-align: center;
+       background-color: #ccc;
+       width: 24px;
+       border-radius: 50%;
+       cursor: pointer;
+      }
   }
-}
+
+  .card{
+    @media screen and (max-width: $break-small) {
+        width: 200px;
+        margin-top:180px;
+
+    }
+  }
+
+  .starButtonAnswer{
+       @media screen and (max-width: $break-small) {
+         position:absolute;
+         left:50%;
+        
+    }
+  }
+
+  .resetNum,.star{
+    @media screen and (max-width: $break-small) {
+         position:absolute;
+         right:30%;
+        
+    }
+  }
+  .headerTitle{
+       @media screen and (max-width: $break-small) {
+        text-align:center;
+        
+    }
+  }
+
+  .listNum{
+       @media screen and (max-width: $break-small) {
+        width:20px;
+        
+    }
+  }
+
+
 
 .selected {
   background-color: #eee;

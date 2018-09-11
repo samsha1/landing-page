@@ -118,9 +118,13 @@ class Game extends React.Component {
     return (
       <div className="container">
       <br/>
-        <h3>Play Random</h3>
+      <div className="row">
+      <div className="col-md-12">
+        <h3 className="headerTitle">Play Random</h3>
         <hr />
-        <div className="row">
+      </div>
+      </div>
+        <div className="row starButtonAnswer">
           <Stars randomnumberOfStars={numberOfrandomStars} />
           <Button
             selectedNumbers={selectedNumbers}
@@ -136,6 +140,7 @@ class Game extends React.Component {
           />
         </div>
         <br />
+        <div className="row">
         {doneStatus ? (
           <DoneFrame doneStatus={doneStatus} playAgain={this.playAgain}/>
         ) : (
@@ -146,6 +151,7 @@ class Game extends React.Component {
           />
         )}
 
+        </div>
         <br />
       </div>
     );
@@ -186,7 +192,7 @@ const Stars = props => {
   //  stars.push(<i className="fa fa-star" />);
   // }
   return (
-    <div className="col-5">
+    <div className="col-md-5 col-sm-5 star">
       {
         _.range(props.randomnumberOfStars).map(i => <i className="fa fa-star" key="{i}" />)}
     </div>
@@ -223,7 +229,7 @@ const Button = props => {
       break;
   }
   return (
-    <div className="col-2">
+    <div className="col-md-2 col-sm-2">
       {button}
       <br />
       <br />
@@ -243,7 +249,7 @@ const Button = props => {
 
 const Answer = props => {
   return (
-    <div className="col-5">
+    <div className="col-md-5 col-sm-5 playSpan resetNum">
       {props.selectedNumbers.map((number, i) => (
         <span key={i} onClick={() => props.resetNumbers(number)}>
           {number}
@@ -274,8 +280,8 @@ const Numbers = props => {
     }
   };
   return (
-    <div className="card text-center">
-      <div>
+    <div className="col-12 card text-center listNum">
+      <div className="playSpan">
         {Numbers.list.map((number, i) => (
           <span
             key={i}
