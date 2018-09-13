@@ -36,7 +36,7 @@ const Header = (props) => {
         </style>
             <Link to="/" style={styles.menuLink} className="menu__item active"> Home </Link> 
             <Link to="/about" style={styles.menuLink} 	className="menu__item"> About </Link>
-            <Link to="/projects" style={styles.menuLink} className="menu__item"> Projects </Link>
+            <Link to="/portfolio" style={styles.menuLink} className="menu__item"> Portfolio </Link>
             <Link to="/contact" style={styles.menuLink} className="menu__item"> Contacts </Link>
    		 </div>
 		);
