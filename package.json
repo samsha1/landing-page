@@ -68,7 +68,7 @@
     "webpack": "^3.8.1"
   },
   "scripts": {
-    "heroku-prebuild": "npm install --production=false",
+    "heroku-prebuild": "npm install --only=dev",
     "predeploy": "npm run build",
     "deploy": "gh-pages -d build",
     "start": "node scripts/start.js",
