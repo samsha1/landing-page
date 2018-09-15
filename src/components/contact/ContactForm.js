@@ -10,6 +10,7 @@ class ContactForm extends React.Component{
 		this.state={
 			userName:null,
 			email:null,
+			subject:null,
 			countCharacter:0
 		};
 		this.handleChange=this.handleChange.bind(this);
@@ -18,9 +19,23 @@ class ContactForm extends React.Component{
 	}
 
 	limitCharacter = (event) => {
+
+		if((event.target.value.length) >= this.props.maxCharacter){
+			event.preventDefault();
+			this.setState({
+				countCharacter: this.props.maxCharacter,
+			});		
+		}else{
+			this.setState({
+				countCharacter: event.target.value.length,
+			});	
+		}
+	}
+
+	forBackSpace = (event)=>{
 		this.setState({
-			countCharacter: event.target.value.length,
-		});
+				countCharacter: event.target.value.length,
+			});	
 	}
 
 	handleChange = (event) => {
@@ -30,7 +45,7 @@ class ContactForm extends React.Component{
 	}
 
 	handleSubmit = (event) =>{
-		alert('A form is submitted with name:'+ this.state.userName);
+		alert('A form is submitted with name:'+ this.state.subject);
 		event.preventDefault();
 	}
 
@@ -61,6 +76,17 @@ class ContactForm extends React.Component{
 				onChange={this.handleChange} required
 			/>
 			<TextField
+				type="text" 
+				hinttext="Subject" 
+				floatingLabelText="Subject" 
+				label="Subject" 
+				id="subject"
+				fullWidth  
+				name="subject" 
+				className={classes.margin} 
+				onChange={this.handleChange} required
+			/>
+			<TextField
 				hinttext="Messages"
 				multiline={true}
 				rows={2}
@@ -68,7 +94,8 @@ class ContactForm extends React.Component{
 				id="messages"
 				label="Messages"
 				floatingLabelText="Message"
-				onChange={this.limitCharacter} className={classes.margin}
+				onKeyPress={this.limitCharacter} className={classes.margin}
+				onChange={this.forBackSpace}
 			/>
 			<small> {this.props.maxCharacter-this.state.countCharacter} character supported</small>
 			<br/>

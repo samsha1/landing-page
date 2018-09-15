@@ -20,7 +20,7 @@ root: {
     maxWidth: 400,
     height: 'auto',
     position: 'absolute',
-    top: '20%',
+    top: '15%',
     left: 10,
     right: 0,
     margin: 'auto'
@@ -57,7 +57,7 @@ render(){
     <div className={classes.container}>
     <Paper className={classes.root} elevation={1}>
     <MuiThemeProvider theme={theme}>
-    	<ContactForm classes={classes} maxCharacter={280}/>
+    	<ContactForm classes={classes} maxCharacter={140}/>
     </MuiThemeProvider>   
      </Paper>
     </div>
