@@ -6,6 +6,9 @@ import {BrowserRouter as Router} from 'react-router-dom';
 import './styles/base.scss';
 import '../node_modules/bootstrap/dist/css/bootstrap.min.css';
 import './index.css';
+import dotenv from 'dotenv';
+
+dotenv.config();
 
 
 ReactDOM.render(<Router><App/></Router>, document.getElementById('root'));

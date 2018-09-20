@@ -5,6 +5,7 @@ import ContactForm from './ContactForm';
 import purple from '@material-ui/core/colors/purple';
 import green from '@material-ui/core/colors/green';
 
+
 import Paper from '@material-ui/core/Paper';
 
 const styles = theme => ({
@@ -48,9 +49,8 @@ const theme = createMuiTheme({
   },
 });
 
+
 class ContactPage extends React.Component {
-
-
 render(){
 	const { classes } = this.props;
   return (
