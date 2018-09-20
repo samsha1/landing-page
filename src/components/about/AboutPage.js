@@ -14,14 +14,15 @@ class AboutPage extends React.Component{
 										
 									</div>
 									<div className="typing-Animation">
-										<h2>I write code and love doing nothing!<span>|</span></h2>
+										<h2>I can't quit Learning!<span>|</span></h2>
 									</div>
 								</div>
 								<div className="col-md-7">
 									<div className="about-content">
-										<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
-										<p>Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
-										<p>Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt. Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit, sed quia non numquam eius modi tempora incidunt ut labore et dolore magnam aliquam quaerat voluptatem.</p>
+										<p>Hi, I'm samrat and I like everything web. I still remember my first C 'Hello World' seven years ago. It was never stopping loop. Life has become same now, 
+											Since then I never stopped to write code.It was a beauty of moving line console code. Graduated, Bachelor in Computer Science and Information Technology in 2018. It was my college days, where I jumped to web Development and PHP in backend and JAVASCRIPT to frontend became my friends. I used to date each library and framework.</p>
+										<p>I'm (mostly) a self taught Software Engineer. My favourite stack right now is React JS on the frontend and Laravel on the backend. I have also worked with Go, WP MVC, JQuery, MongoDB, MYSQL, Docker, CodeIgniter. I am also obsessed with making the web look pretty with SASS/CSS.</p>
+										<p>When I am not working you can find me watching or playing Football, reading and writing blogs, Travelling, Researching in Open Source Projects.</p>
 									</div>
 								</div>
 							</div>
