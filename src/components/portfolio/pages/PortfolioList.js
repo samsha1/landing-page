@@ -49,13 +49,13 @@ export default [{
         <div className="portfolio-item__title">BerryBytes</div>
 
         <div className="portfolio-item__desc">
-          BerryBytes is indian based hosting company that serves hosting. domain Registration and many more.This Project is still in Development Stage.``
+          BerryBytes is indian based hosting company that provide hosting service, domain Registration and many more.This Project is still in Development Stage.``
         </div>
         <div className="portfolio-item__icon">
           <IconContext.Provider value={{ color: "#3B80F7",size:"1em", className: "global-class-name" }}><FaPhp /><FaHtml5/><FaCss3Alt/><FaReact/></IconContext.Provider>
         </div>
         <div className="portfolio-item__links">
-          <a target="_blank" rel="noopener noreferrer" href="http://54.36.230.131:8001">Visit Site</a>
+          <a target="_blank" rel="noopener noreferrer" href="berrybytes.com">Visit Site</a>
         </div>
       </div>
 

@@ -57,7 +57,7 @@ render(){
     <div className={classes.container}>
     <Paper className={classes.root} elevation={1}>
     <MuiThemeProvider theme={theme}>
-    	<ContactForm classes={classes} maxCharacter={140}/>
+    	<ContactForm classes={classes} maxCharacter={10}/>
     </MuiThemeProvider>   
      </Paper>
     </div>

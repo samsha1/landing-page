@@ -18,6 +18,7 @@ class ContactForm extends React.Component{
 			email:null,
 			subject:null,
 			messages:null,
+			characterExceeds:false,
 			countCharacter:0
 		};
 		this.handleChange=this.handleChange.bind(this);
@@ -25,28 +26,24 @@ class ContactForm extends React.Component{
 
 	}
 
-	limitCharacter = (event) => {
-
-		if((event.target.value.length) >= this.props.maxCharacter){
-			event.preventDefault();
-			this.setState({
-				countCharacter: this.props.maxCharacter,
-			});		
-		}else{
-			this.setState({
-				countCharacter: event.target.value.length,
-			});	
+	shouldComponentUpdate(){
+		if(this.state.countCharacter >= this.props.maxCharacter){
+			return false;
 		}
+
+		return true;
 	}
 
 	forBackSpace = (event)=>{
-		if((event.target.value.length) >= this.props.maxCharacter){
+		if((event.target.value.length) > this.props.maxCharacter){
 			event.preventDefault();
 			this.setState({
+				characterExceeds:true,
 				countCharacter: this.props.maxCharacter,
-			});		
+			});
 		}else{
 			this.setState({
+				characterExceeds:false,
 				countCharacter: event.target.value.length,
 				[event.target.id]:event.target.value
 			});	
@@ -78,11 +75,12 @@ class ContactForm extends React.Component{
                 this.setState({
                   formEmailSent: true,
                   formSubmitted:false,
-                   userName:null,
-                    email:null,
-                    subject:null,
-                    messages:null,
-                    countCharacter:0
+                  userName:null,
+                  email:null,
+                  subject:null,
+                  messages:null,
+                  characterExceeds:false,
+                  countCharacter:0
              });
         document.getElementById('contact-form').reset();
       })
@@ -93,7 +91,7 @@ class ContactForm extends React.Component{
 	render(){
 		const { classes } = this.props;
 		const {
-			formSubmitted,formEmailSent
+			formSubmitted,formEmailSent,characterExceeds
 		}=this.state;
 		return(
 			<form onSubmit={this.handleSubmit} id="contact-form">
@@ -136,7 +134,7 @@ class ContactForm extends React.Component{
 				name="messages"
 				label="Messages"
 				onChange={this.forBackSpace}
-				onKeyPress={this.limitCharacter} className={classes.margin}
+				className={classes.margin}
 				
 			/>
 			<small> {this.props.maxCharacter-this.state.countCharacter} character supported</small>
@@ -148,7 +146,7 @@ class ContactForm extends React.Component{
 				size="medium"
 				color="primary"
 				className={classes.margin}
-				disabled={formSubmitted || formEmailSent}
+				disabled={formSubmitted || formEmailSent || characterExceeds}
 			>{formSubmitted ? 'Submitting..' : formEmailSent ? 'Sent!' : 'Submit' }</Button></center>
 
 			</form>
