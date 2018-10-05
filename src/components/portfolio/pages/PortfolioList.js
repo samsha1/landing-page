@@ -36,7 +36,7 @@ export default [{
           <IconContext.Provider value={{ color: "#3B80F7",size:"1em", className: "global-class-name" }}><FaDocker /><FaGofore/></IconContext.Provider>
         </div>
         <div className="portfolio-item__links">
-          <a target="_blank" rel="noopener noreferrer" href="htttps://dev.to/samsha1/walk-through-docker-5bm3">Blog</a>
+          <a target="_blank" rel="noopener noreferrer" href="https://dev.to/samsha1/walk-through-docker-5bm3">Blog</a>
         </div>
       </div>
 
@@ -55,7 +55,7 @@ export default [{
           <IconContext.Provider value={{ color: "#3B80F7",size:"1em", className: "global-class-name" }}><FaPhp /><FaHtml5/><FaCss3Alt/><FaReact/></IconContext.Provider>
         </div>
         <div className="portfolio-item__links">
-          <a target="_blank" rel="noopener noreferrer" href="berrybytes.com">Visit Site</a>
+          <a target="_blank" rel="noopener noreferrer" href="http://berrybytes.com">Visit Site</a>
         </div>
       </div>
 
