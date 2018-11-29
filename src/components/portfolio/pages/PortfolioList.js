@@ -3,7 +3,8 @@ import { IconContext } from "react-icons";
 import { FaPhp,FaDocker,FaJs,FaHtml5,FaReact,FaCss3Alt,FaGofore } from 'react-icons/fa';
 import PlayNine from '../../home/PlayNine';
 
-export default [{
+export default [
+{
 	name:'OBTRS',
 	render:(
 	  <div className="portfolio-item">
