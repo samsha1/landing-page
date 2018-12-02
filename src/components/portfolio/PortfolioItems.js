@@ -4,7 +4,7 @@ import './styles.scss';
 
 const PortfolioItems = (props) => {
 
-  if (props.render) return props.render;
+  if (props.getItems) return props.getItems;
   else
     return (
       	<div className="portfolio-item">
