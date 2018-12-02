@@ -1,18 +1,19 @@
 import React from 'react';
 import axios from 'axios';
 import { IconContext } from "react-icons";
-import { FaPhp,FaDocker,FaJs,FaHtml5,FaReact,FaCss3Alt,FaGofore } from 'react-icons/fa';
-import PortfolioItems from '../PortfolioItems';
+import { FaPhp,FaJs,FaHtml5 } from 'react-icons/fa';
 import './styles.scss';
 
-const API = "http://localhost:8000/api/v1/meeting";
+const API = "http://localhost:8000/api/v1/portfolio";
 
 class PortfolioPage extends React.Component{
 
   render() { 
   
       return (
+        <div>
           <PortfolioItem/>
+        </div>
         );
     }
 
@@ -38,10 +39,12 @@ class PortfolioItem extends React.Component{
     axios.get(API)
     //.then((result) => console.log(result.data))
     .then((result)  => 
-      this.setState({ isLoaded: true, items: result.data.meetings})
+      this.setState({ isLoaded: true, items: result.data.portfolios})
       )
     .catch(error => this.setState({ error, isLoaded: true }));
   }
+
+
   render() {
     const { error,isLoaded, items } = this.state;
       if (!isLoaded) {
@@ -51,14 +54,16 @@ class PortfolioItem extends React.Component{
       } else if(error){
        return
        (
-          <HeadMessage headings={error.message}/>
+          <div>
+            <HeadMessage headings={error.message}/>
+          </div>
         );
      } else {
       return(
-      <div>
-          <HeadMessage headings={"Portfolio"}/>
+        <div>
+         <HeadMessage headings={"Portfolio"}/>
           <ItemList items={items}/>
-      </div>
+        </div>
         );
   }
   }
@@ -66,11 +71,13 @@ class PortfolioItem extends React.Component{
 
 }
 
-const HeadMessage = (props) =>{
+const HeadMessage = props => {
+  console.log("Inside HeadMessage");
   return (
        <div className="portfolio-page">
           <div className="content-grid">
               <h1>{props.headings}</h1>
+
            </div>
       </div>
 
@@ -78,10 +85,10 @@ const HeadMessage = (props) =>{
 
 };
 
-const ItemList = (props) => {
+const ItemList = props => {
+  console.log("Inside ItemList");
   return (
       <div className="portfolio-wrapper">
-        <h1>gsdfjs </h1>
           {props.items.map(item => (
             <div className="portfolio-item" key={item.id}>
                  <div className="portfolio-item__title">{item.title}</div>
@@ -92,11 +99,11 @@ const ItemList = (props) => {
                     <IconContext.Provider value={{ color: "#3B80F7", size:"1em",className: "global-class-name" }}><FaPhp /><FaJs/><FaHtml5/></IconContext.Provider>
                  </div>
                  <div className="portfolio-item__links">
-                     <a target="_blank" rel="noopener noreferrer" href={item.view_meeting.href}>Visit Site</a>
+                     <a target="_blank" rel="noopener noreferrer" href={item.url}>View More</a>
                  </div>
              </div>
            ))}
-          </div> 
+        </div> 
 
     );
 };
