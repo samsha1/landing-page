@@ -1,0 +1,167 @@
+@import '../../styles/breakpoints';
+$break-small: 575px;
+
+.intro-wrapper {
+  text-align: center;
+  color: #fff;
+  position: relative;
+  top: 100px;
+  z-index: 1000; 
+}
+
+.intro-name {
+  font-family: Reem Kufi,sans-serif;
+  font-size: 4rem;
+  font-weight: 700;
+  line-height: 4rem;
+  padding-bottom: 1rem; 
+}
+
+.intro-wrapper > .tagline {
+  font-size: 1.375rem;
+  margin: 1.5rem 0;
+  font-weight: 300; 
+}
+
+.App-logo {
+  color: white; 
+}
+
+.social-icons {
+  padding: 0.25rem 0;
+  font-size: 3rem; 
+}
+
+
+.social-icons {
+  padding: 0.25rem 0;
+  font-size: 3rem;
+
+  @include breakpoint-small-down {
+    font-size: 2.5rem;
+  }
+
+  a {
+    padding: 0 0.625rem;
+
+    &.devto svg {
+      margin-bottom: -0.25rem;
+      width: 2.7rem;
+      height: 2.7rem;
+
+      @include breakpoint-small-down {
+        margin-bottom: -0.225rem;
+        width: 2.25rem;
+        height: 2.25rem;
+      }
+    }
+  }
+
+  &.animate-icons {
+    a {
+      display: inline-block;
+      transform: perspective(1px) translateZ(0);
+      box-shadow: 0 0 1px transparent;
+
+      &:hover,
+      &:focus,
+      &:active {
+        animation-name: icon-wobble;
+        animation-duration: 0.75s;
+        animation-timing-function: ease-in-out;
+        animation-iteration-count: 1;
+      }
+    }
+  }
+
+  @keyframes icon-wobble {
+    25% {
+      transform: translateY(-8px);
+    }
+    50% {
+      transform: translateY(0px);
+    }
+    75% {
+      transform: translateY(-4px);
+    }
+    100% {
+      transform: translateY(0px);
+    }
+  }
+}
+
+
+.fa-star {
+  margin: 0.5em;
+  font-size: 36px;
+}
+
+
+  .playSpan {
+    span{
+      display: inline-block;
+       margin: 0.5em;
+       text-align: center;
+       background-color: #ccc;
+       width: 24px;
+       border-radius: 50%;
+       cursor: pointer;
+      }
+  }
+
+  .card{
+    @media screen and (max-width: $break-small) {
+        width: 200px;
+        margin-top:180px;
+
+    }
+  }
+
+  .starButtonAnswer{
+       @media screen and (max-width: $break-small) {
+         position:absolute;
+         left:50%;
+        
+    }
+  }
+
+  .resetNum,.star{
+    @media screen and (max-width: $break-small) {
+         position:absolute;
+         right:30%;
+        
+    }
+  }
+  .headerTitle{
+       @media screen and (max-width: $break-small) {
+        text-align:center;
+        
+    }
+  }
+
+  .listNum{
+       @media screen and (max-width: $break-small) {
+        width:20px;
+        
+    }
+  }
+
+
+
+.selected {
+  background-color: #eee;
+  color: #ddd;
+  cursor: not-allowed;
+}
+
+.used {
+  background-color: #aaddaa;
+  color: #99bb99;
+  cursor: not-allowed;
+}
+
+.doneFrame{
+  position: relative;
+  right:20px;
+
+}
