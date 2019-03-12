@@ -22,6 +22,7 @@ class App extends React.Component{
 						<Route path="/about" component={AboutPage} />
 						<Route path="/portfolio" component={PortfolioPage} />
 						<Route path="/contact" component={ContactPage} />
+						<Route path="/landing-page" component={HomePage} exact/>
 						<Route component={ErrorPage} />
 					</Switch>
 			</div>
